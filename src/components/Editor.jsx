@@ -11,6 +11,7 @@ const socket = io('https://realtime-editor-j05x.onrender.com:10000', {
     reconnectionAttempts: 'Infinity',
     transports: ['websocket']
 })
+
 export default function Editor() {
     const navigateTo = useNavigate();
     const location = useLocation();
