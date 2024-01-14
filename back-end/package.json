@@ -1,10 +1,8 @@
 {
   "scripts": {
     "start:front": "react-scripts start",
-    "start": "npm run build && node server.js",
-    "vercel:build":"npm run build && node server.js", 
+    "start": "npm run build",
     "build": "react-scripts build",
-    "server:prod": "node server.js",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "dev": "node server.js"
