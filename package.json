@@ -22,12 +22,10 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "start": "node back-end/server.js",
+    "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "vercel-build": "npm install ",
-    "dev": "node back-end/server.js"
+    "eject": "react-scripts eject"
   },
   "eslintConfig": {
     "extends": [
@@ -48,6 +46,7 @@
     ]
   },
   "devDependencies": {
-    "tailwindcss": "^3.4.1"
+    "tailwindcss": "^3.4.1",
+    "react-scripts": "latest"
   }
 }
