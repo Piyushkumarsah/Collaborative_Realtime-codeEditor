@@ -22,7 +22,6 @@ socket.addEventListener('open', (event) => {
   socket.addEventListener('close', (event) => {
     console.warn('WebSocket connection closed:', event);
   });
-  
 export default function Editor() {
     const navigateTo = useNavigate();
     const location = useLocation();
