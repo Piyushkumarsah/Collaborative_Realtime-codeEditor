@@ -11,7 +11,18 @@ const socket = io('https://realtime-editor-qd3c.onrender.com:10000', {
     reconnectionAttempts: 'Infinity',
     transports: ['websocket']
 })
-
+socket.addEventListener('open', (event) => {
+    console.log('WebSocket connection opened:', event);
+  });
+  
+  socket.addEventListener('error', (event) => {
+    console.error('WebSocket error:', event);
+  });
+  
+  socket.addEventListener('close', (event) => {
+    console.warn('WebSocket connection closed:', event);
+  });
+  
 export default function Editor() {
     const navigateTo = useNavigate();
     const location = useLocation();
