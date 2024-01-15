@@ -4,14 +4,17 @@ const http = require('http');
 const { Server } = require('socket.io');
 const server = http.createServer(app);
 const io = new Server(server);
-const ACTIONS = require('./src/Actions');
+const ACTIONS = require('./Actions');
 const path = require('path');
 const userDetails = {};
 let pastM = '';
-app.use(express.static('build'))
-app.use((req,resp,next)=>{
-    resp.sendFile(path.join(__dirname,'build','index.html'));
-})
+
+// app.use(express.static('build'))
+
+// app.use((req,resp,next)=>{
+//     resp.sendFile(path.join(__dirname,'build','index.html'));
+// })
+
 io.on(ACTIONS.CONNECTION, (socket) => {
 
   socket.on(ACTIONS.JOINROOM, ({ roomId, userName }) => {
