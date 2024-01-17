@@ -7,7 +7,7 @@ import { io } from 'socket.io-client'
 import { useLocation, useNavigate, Navigate } from 'react-router';
 import toast from 'react-hot-toast';
 
-const socket = io('https://realtimeeditor-2r9t.onrender.com:8080', {
+const socket = io('https://realtimeeditor-2r9t.onrender.com', {
     reconnectionAttempts: Infinity,
     transports: ['websocket']
 })
