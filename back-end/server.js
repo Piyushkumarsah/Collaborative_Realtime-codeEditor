@@ -9,11 +9,10 @@ const path = require('path');
 const userDetails = {};
 let pastM = '';
 
-// app.use(express.static('build'))
-
-// app.use((req,resp,next)=>{
-//     resp.sendFile(path.join(__dirname,'build','index.html'));
-// })
+app.use(express.static('./build'))
+app.use((req,resp,next)=>{
+    resp.sendFile(path.join(__dirname,'./build','index.html'));
+})
 
 io.on(ACTIONS.CONNECTION, (socket) => {
 
