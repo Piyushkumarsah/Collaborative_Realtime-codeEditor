@@ -64,3 +64,6 @@ const PORT = process.env.PORT || 5000;
 server.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`,process.env.PORT);
 });
+server.get('/',(req,resp)=>{
+  resp.send(`Server is live on Port ${PORT} `)
+})

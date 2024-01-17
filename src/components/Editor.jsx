@@ -7,7 +7,7 @@ import { io } from 'socket.io-client'
 import { useLocation, useNavigate, Navigate } from 'react-router';
 import toast from 'react-hot-toast';
 
-const socket = io('http://localhost:5000', {
+const socket = io('http://realtimeeditor-2r9t.onrender.com:8080', {
     reconnectionAttempts: 'Infinity',
     transports: ['websocket']
 })
@@ -111,7 +111,6 @@ export default function Editor() {
                 </div>
                 <TextArea roomId={roomId} userName={userName} socket={socket} ></TextArea>
                 {/* <textarea onChange={(e)=>{console.log("changing",e.target.value)}}></textarea> */}
-
             </div>
         </div>
     )
