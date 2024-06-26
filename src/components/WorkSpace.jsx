@@ -1,6 +1,5 @@
 import UserList from './UserList'
 import React, { useEffect, useState } from 'react'
-import Client from './Client';
 import Split from 'react-split'
 import toast from 'react-hot-toast';
 import ACTIONS from '../Actions'
