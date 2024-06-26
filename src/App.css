@@ -36,3 +36,7 @@
     transform: rotate(360deg);
   }
 }
+.CodeMirror{
+  height: 100% !important;
+  font-size: 20px;
+}
