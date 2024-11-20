@@ -18,7 +18,9 @@ export default function () {
     const { roomId, userName } = useParams();
     const navigateTo = useNavigate();
     const location = useLocation();
-
+    const prevContent = location.state.prevContent;
+    const prevUser = location.state.userName;
+    console.log(location.state)
     const [client, setClient] = useState([
         { socketid: socket.id, userName }
     ])
@@ -112,7 +114,7 @@ export default function () {
                     </div>
                 </section>
                 <section>
-                    <JoyTab tabs={tabs} last={tabs.length-1} roomId={roomId} name={userName} socket={socket} />
+                    <JoyTab tabs={tabs} prevUser={prevUser} prevContent={prevContent} roomId={roomId} name={userName} socket={socket} />
                 </section>
             </Split>
         </main>

@@ -6,13 +6,12 @@ import TabPanel from '@mui/joy/TabPanel';
 
 import CodeBox from './CodeBox';
 
-const JoyTab = ({ last, tabs, roomId, name, socket }) => {
+const JoyTab = ({ prevContent,prevUser, tabs, roomId, name, socket }) => {
     const [tabVal, setTabVal] = useState(name);
     const handleTabChange = (event, newValue) => {
         console.log(newValue);
         setTabVal(newValue);
     };
-
     return (
         <Tabs aria-label="Basic tabs" value={tabVal} sx={{ backgroundColor: "#131417", color: "white" }} onChange={handleTabChange}>
             <TabList sx={{ color: "white" }} >
@@ -33,7 +32,7 @@ const JoyTab = ({ last, tabs, roomId, name, socket }) => {
             {
                 tabs.map((item, idx) => (
                     <TabPanel key={idx} keepMounted value={item.userName}>
-                        <CodeBox tabId={item.id} roomId={roomId} socket={socket} name={item.userName} ></CodeBox>
+                        <CodeBox tabId={item.id} prevUser={prevUser} prevContent={prevContent} roomId={roomId} socket={socket} name={item.userName} ></CodeBox>
                     </TabPanel>
                 ))
 

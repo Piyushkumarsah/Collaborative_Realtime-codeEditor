@@ -1,9 +1,7 @@
 import './App.css';
-import Editor from './components/Editor';
 import Home from './components/Home';
 import { Toaster } from 'react-hot-toast';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import JoyTab  from './components/JoyTab';
 import WorkSpace from './components/WorkSpace';
 
 function App() {
